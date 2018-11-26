@@ -2,7 +2,7 @@ let chooseBtn = document.getElementById('choose'),
     receiveBtn = document.getElementById('receive'),
     heading = document.getElementsByTagName('h1')[0],
     nameInput = document.getElementsByClassName('contactform_name')[0],
-    phoneInput = document.querySelector('.contactform_phone'),
+    phoneInput = document.querySelectorAll('.contactform_phone')[1],
     mailInput = document.querySelectorAll('.contactform_mail')[1],
     modal = document.querySelector('.modal'),
     closeBtn = document.querySelector('.close'),
@@ -10,6 +10,15 @@ let chooseBtn = document.getElementById('choose'),
     small = document.querySelector('div h3'),
     overlay = document.querySelector('.overlay')
     thanks = document.querySelector('.thanks');
+    
+
+let username = prompt('Как Ваше имя', "Андрей Иванович"),
+    tel = prompt('Ваш номер телефона', "+38(097)564-09-00"),
+    email = prompt("Введите e-mail", "info@ukr.net");
+
+    nameInput.value = username,
+    phoneInput.value = tel,
+    mailInput.value = email;
 
     function hover(){
         heading.textContent = "Привет"
