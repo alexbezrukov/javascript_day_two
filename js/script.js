@@ -9,7 +9,8 @@ let chooseBtn = document.getElementById('choose'),
     textArea = document.getElementsByName('message')[0],
     small = document.querySelector('div h3'),
     overlay = document.querySelector('.overlay')
-    thanks = document.querySelector('.thanks');
+    thanks = document.querySelector('.thanks'),
+    submit = document.querySelector('button');
     
 
 let username = prompt('Как Ваше имя', "Андрей Иванович"),
@@ -36,7 +37,7 @@ let username = prompt('Как Ваше имя', "Андрей Иванович")
         modal.style.display = "block"
     });
 
-    closeBtn.addEventListener("click", function(){
+    submit.addEventListener("click", function(){
         modal.style.display = "none"
         overlay.style.display = "block"
         thanks.style.display = "block"
