@@ -38,10 +38,14 @@ let username = prompt('Как Ваше имя', "Андрей Иванович")
 
 
     submit.addEventListener("click", function(){
-        modal.style.display = "none"
-        overlay.style.display = "block"
-        thanks.style.display = "block"
-
+        if(nameInput.value.length > 0 && mailInput.value.length > 0 && phoneInput.value.length > 0){
+            modal.style.display = "none"
+            overlay.style.display = "block"
+            thanks.style.display = "block"
+        }
+         else {
+             alert("Не все поля заполнены")
+         }
         setTimeout(() => {
             overlay.style.display = "none"
             thanks.style.display = "none"
@@ -58,6 +62,6 @@ let username = prompt('Как Ваше имя', "Андрей Иванович")
     });
 
 
-
+    
 
   
